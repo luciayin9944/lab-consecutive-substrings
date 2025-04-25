@@ -1,2 +1,24 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+//Use two pointers:
+function consecutiveSubstrings(inputString):
+    resultList ← empty list
+    stringLength ← length of inputString
+
+    FOR startIndex FROM 0 TO stringLength - 1:
+        FOR endIndex FROM startIndex + 1 TO stringLength:
+            substring ← slice of inputString from startIndex to endIndex (exclusive)
+            ADD substring TO resultList
+
+    RETURN resultList
+
+#Explanation:
+1.Use two pointers: start index of the substring, and end index, starting just after the start index.
+2.Loop though the string:
+	•	Outer loop: picks the start index of the substring.
+	•	Inner loop: picks the end index, starting just after the start index.
+3. The slice is taken from startIndex to endIndex (exclusive), so all substrings are consecutive.
+4. Append the Substrings into resultList in the order they appear.
+
+
